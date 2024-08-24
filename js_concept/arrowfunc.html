@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //before arrow function
+      hello = function () {
+        return "Hello world!!";
+      };
+      //u acn avoid function keywod using the arrow =>
+      hello1 = () => {
+        return "Revathi";
+      };
+
+      //arrow function return value by default
+
+      hello2 = () => "family";
+
+      document.write(hello());
+      //   Arrow Function With Parameters:
+
+      family = (val) => "Vaish" + val;
+      document.writeln(family("navi"));
+
+      //func suing arrow with arguments
+      ghee = (val) => "hello" + val;
+      document.write(ghee("thangam"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="id1" type="text" />
+    <button type="button" onclick="myfun()">Button</button>
+    <pn id="p"></p>
+    <script>
+        function myfun(){
+            const msg=document.getElementById("p");
+            msg.innerHTML="";
+            let x=document.getElementById("id1").value;
+            try{
+                if(x.trim()=="")throw "empty";
+                //NaN --ot a number
+                if(isNaN(x)) throw "not a number";
+                x=Number(x);
+                if(x<5) throw "too low";
+                if(x>10) throw "too high";
+
+
+
+            }
+            catch(e){
+                //an HTML element property that has two uses for web developers: 1) You can use it to get the internal HTML content of any HTML element as an HTML string. 2) You can also use it to set or change elements' innerHTML content.
+                msg.innerHTML="input is "+e;
+                //here is all abt that e will deliver ythe string that u gonna throw after validating in try block.
+
+            }
+            finally {
+                document.getElementById("id1").value = "";
+  }
+        }
+    </script>
+  </body>
+</html>

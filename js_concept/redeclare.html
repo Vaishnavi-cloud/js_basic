@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <script>
+      var name = "vaishu";
+      var name; //canredeclare
+      document.write(name);
+      let name1 = "anu";
+      //   let name1;
+      //Cannot redeclare block-scoped variable 'name1'
+      //Always declare a variable with const when you know that the value should not be changed.
+
+      const name2 = "sita";
+      //   const name2;//Cannot redeclare block-scoped variable 'name2'.
+      const PI = 3.141592653589793;
+      PI = 3.14; // This will give an error
+      PI = PI + 10; // This will also give an error
+      console.log(PI);
+
+      //below is the erroe u get
+      //Uncaught TypeError: Assignment to constant variable.
+      //at redeclare.html:16:10
+    </script>
+  </body>
+</html>

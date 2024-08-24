@@ -1,0 +1,51 @@
+<!-- Always declare a variable with const when you know that the value should not be
+changed.
+Use const when you declare:
+
+A new Array
+A new Object
+A new Function
+A new RegExp -->
+<!-- you can NOT:
+
+Reassign a constant value
+Reassign a constant array
+Reassign a constant object
+But you CAN:
+
+
+Change the elements of constant array
+Change the properties of constant object -->
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <script>
+      const cars = ["audi", "bmw", "royce"];
+      //   console.log(cars);
+
+      //inorder to get all the elements in the array go with map
+      console.log(cars[0]);
+
+      cars.push("honda");
+
+      //   console.log(cars);
+
+      //// You can create a const object:
+
+      const car1 = { type: "Fiat", model: "500", color: "white" };
+      console.log(car1);
+
+      //u can't do like this
+      //   car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR
+
+      ///// You can change a property:
+
+      car1.color = "red";
+      //// You can add a property:
+
+      car1.owner = "Vaishnavi";
+      console.log(car1);
+    </script>
+  </body>
+</html>

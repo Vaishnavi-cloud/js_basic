@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <script>
+      let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      let length = text.length;
+      console.log(length);
+      let text1 = "Apple, Banana, Kiwi";
+      let part = text1.slice(7, 13);
+      //13-1
+      //   so banana
+      console.log(part);
+      let part1 = text1.slice(7); // fromth e7th index till the end
+      console.log(part1);
+      let part2 = text1.slice(-12); //
+      console.log(part2);
+      let part31 = text1.slice(-12, -6); //from backside and exactly near banana  it is like -6+1 till 5th index
+      console.log(part31);
+
+      let str = "Apple, Banana, Kiwi";
+      let part4 = str.substring(7, 13);
+      console.log(part4);
+
+      let text2 = "Please visit Microsoft!";
+      let newText = text2.replace("Microsoft", "W3Schools");
+      console.log(newText);
+      let newText1 = text2.replace("MICROSOFT", "W3Schools"); //case insensitive it won't work here.
+      let newText2 = text2.replace(/MICROSOFT/i, "W3Schools"); //works to replace the case insensitivity
+      let text3 = "Please visit Microsoft and Microsoft!";
+
+      let newText3 = text3.replace(/Microsoft/g, "W3Schools"); //g is the global match
+
+      console.log(newText2);
+      //JavaScript String ReplaceAll()
+      let tt = "cat areworst and cat very annoying";
+      tt = tt.replaceAll("cat", "dogs");
+      console.log(tt);
+      // text = text.replaceAll(/Cats/g, "Dogs");
+      // text = text.replaceAll(/cats/g, "dogs");
+
+      let t1 = "Hello World!"; // String
+      let t2 = t1.toLowerCase();
+      let t27 = t1.toUpperCase();
+      console.log(t27);
+      console.log(t2); //hello world
+
+      let y = "Vaishu" + "" + "navi";
+      console.log(y);
+      //intaed of + u can use concat operator
+      let z = "Vaish".concat("Navi!");
+      console.log(z);
+      //JavaScript String trim()
+
+      let t11 = "      Hello World!      ";
+      let t22 = t11.trim();
+      let t23 = t11.trimStart();
+      let t42 = t11.trimEnd();
+      console.log(t42);
+      //works like trim().
+
+      console.log(t22);
+      console.log(t23);
+
+      let tr = "5";
+      let padded = tr.padStart(4, "0");
+      console.log(padded); //0005
+
+      let numb = 5;
+      let textt = numb.toString();
+      let padded1 = textt.padStart(4, "0");
+      console.log(padded1); //0005
+
+      let padded2 = tr.padEnd(4, "x");
+      console.log(padded2); //5xxx
+
+      let text5 = "HELLO WORLD";
+      let char = text5.charAt(0);
+      let char1 = text5[0];
+      console.log(char1); //H
+
+      console.log(char); //H
+
+      // text.split(",")    // Split on commas
+      // text.split(" ")    // Split on spaces
+      // text.split("|")    // Split on pipe
+      // text.split("")
+
+      let texx = "Hello world, welcome to the universe.";
+      textx.startsWith("world", 5); //false
+      textx.startsWith("world", 6); //true
+
+      let text = "John Doe";
+      text.endsWith("Doe"); //true
+      text.endsWith("world", 11); //true
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //async ---it ensure theat it returns a promise ebthouh by calling func.
+      async function myFunction() {
+        return "Hello";
+      }
+      myFunction().then(
+        function (value) {
+          myDisplayer(value);
+        },
+        function (error) {
+          myDisplayer(error);
+        }
+      );
+      //Or simpler, since you expect a normal value (a normal response, not an error):
+
+      async function myFunction() {
+        return "Hello";
+      }
+      myFunction().then(function (value) {
+        myDisplayer(value);
+      });
+
+      //The await keyword can only be used inside an async function.
+      //The await keyword makes the function pause the execution and wait for a resolved promise before it continues:
+      async function myDisplay() {
+        let myPromise = new Promise(function (resolve, reject) {
+          resolve("I love You !!");
+        });
+        document.getElementById("demo").innerHTML = await myPromise;
+      }
+
+      myDisplay();
+
+      //Example without reject
+      async function myDisplay() {
+        let myPromise = new Promise(function (resolve) {
+          resolve("I love You !!");
+        });
+        document.getElementById("demo").innerHTML = await myPromise;
+      }
+
+      myDisplay();
+    </script>
+  </body>
+</html>
